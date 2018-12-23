@@ -39,6 +39,8 @@ function changeLanguage(){
 
 // After load DOM
 $(document).ready(function(){
+    $("#pages").niceScroll({cursorcolor:"rgba(255,255,255,0.2)",cursorborder:"black"});
+    
     let url = window.location.pathname;
     let name = url.substring(url.lastIndexOf('/')+1).split(".")[0];
     if(name!="index"){
@@ -72,8 +74,6 @@ $(document).ready(function(){
             });
         }
     });
-
-    $("#pages").niceScroll({cursorcolor:"rgba(255,255,255,0.2)",cursorborder:"black"});
 
     // click -> zoom image
     $('body').on("click", ".img-thumbnail", function() {
