@@ -1,0 +1,16 @@
+{
+    "head":{
+        "pl":["Inne","coś co koduję ale w innych językach"],
+        "en":["Other","something I code but in other languages"]
+    },
+    "text":[
+        {
+            "pl":"<p>Krótka konsolowa gra, w której musisz zebrać punkty i dotrzeć do mety, a wszystko w labryncie. Gra posiada 2 tryby gry: casual oraz hardmode.<br />Tryb hardmode charakteryzuje się brakiem możliwości wejścia dwukrotnie na to samo pole w labiryncie a możliwość resetowania przechodzonego poziomu jest ograniczona ilością żyć.<br />Gra posiada również system zapisu oraz możliwość dodawania własnych map.</p><p>Do tworzenia kodu poziomu został stworzony odpowiedni interfejs graficzny napisany w języki js.</p>",
+            "en":"<p>A short console game in which you have to collect points and reach the finish line, and everything in the maze. The game has 2 game modes: casual and hardmode. <br />The hardmode mode is characterized by the inability to enter the same field in the labyrinth twice and the possibility of resetting the level passed is limited by the number of lives.<br />The game also has a save system and the ability to add your own maps.</p><p>To create the level code, there was written graphical interface in javascript.</p>"
+        },{
+            "pl":"<p>Plugin dla serwera Minecraft Bukkit. Dodaje konstrukcję ołtarza oraz rytułały przywołania danych itemów.<br />Ołtarz jest rozpatrywany jako multiblock a rytułały można tworzyć i konfigurować za pomocą zewnętrzych plików.</p>",
+            "en":"<p>Plugin for Minecraft Bukkit server. Adds the construction of the altar and the rituals of creating items.<br />The altar is considered as a multiblock and the rituals can be set up using external files.</p>"
+        }
+    ]
+}
+

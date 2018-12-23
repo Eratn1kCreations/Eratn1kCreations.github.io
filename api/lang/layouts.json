@@ -1,0 +1,12 @@
+{
+    "head":{
+        "pl":["Layouty","od zera lub dla profilów toyhou.se"],
+        "en":["Layouts","from scratch or for profiles on toyhou.se"]
+    },
+    "text":[
+        {
+            "pl":"Layout został zrobiony w dwóch wersjach: standardowej oraz premium.<br />Wersja premium dzieli się na 3 obszary: strona użytkownika, strona postaci i resztę profilu. Możliwość manipulacji stroną za pomocą własnego kodu css pozwala zmianić kolorystykę we wszystkich zakładkach i oknach danego profilu.<br />Wersja standardowa nie posiada tych własności i umożliwia zaprojektowanie jedynie strony użytkownika i postaci.",
+            "en":"This layout was made in two versions: standard and premium.<br />The premium version is divided into three areas: user page, character page and the rest of the profile. The ability to manipulate the page using your own css code allows you to change the colors in all tabs and windows of a given profile.<br />The standard version doesn't have these properties and allows you to design only the user and character page."
+        }
+    ]
+}

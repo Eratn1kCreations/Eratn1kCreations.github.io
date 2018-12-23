@@ -1,0 +1,15 @@
+{
+    "head":{
+        "pl":["O mnie","w sumie nic ciekawego ale znajdziesz tutaj kontakt do mnie"],
+        "en":["About me","nothing interesting but you will find here contact with me"]
+    },
+    "text":[
+        {
+            "pl":"Historia",
+            "en":"About me"
+        },{
+            "pl":"Kontakt",
+            "en":"Contact"
+        }
+    ]
+}
