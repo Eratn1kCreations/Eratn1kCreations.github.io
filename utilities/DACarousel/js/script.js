@@ -1,4 +1,4 @@
-var ArtIndex = 0;
+var ArtIndex = 1;
 
 /*$(function() {
   $("#sortable").sortable();

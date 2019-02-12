@@ -27,7 +27,14 @@
 
         <div class="p-2 col-lg-6">
           <kbd>Arts in carousel</kbd>
-          <ul class="p-0" id="sortable"></ul>          
+          <ul class="p-0" id="sortable">
+            <div class="input-group my-2">
+              <input class="form-control" type="url" placeholder="Art url" onchange="updatePreview(this,0)" value="https://eratn1kcreations.github.io/utilities/DACarousel/img.png">
+              <div class="input-group-append">
+                <button class="btn btn-danger btn-sm" onclick="removeArt(this,0)">Remove</button>
+              </div>
+            </div>
+          </ul>          
           <button class="mb-2 btn w-100" onclick="addArt()">Add new</button>
         </div>
 
@@ -37,18 +44,20 @@
             <div class="scrollsides aleft"></div>
             <div class="scrollsides aright"></div>
             <div class="carouselframe" id="cframe">
-
+              <a href="#"><img id="art0" src="https://eratn1kcreations.github.io/utilities/DACarousel/img.png"></a>
             </div>
           </div>
 
 <pre class="mt-3">
 <kbd>css</kbd>
-<code id="outcss"></code>
+<code id="outcss">.carouselframe{width:500px;}
+.carouselbox{max-width:500px;}
+.aright:hover ~ .carouselframe {left:-0px;}</code>
 <kbd>html</kbd>
-<code id="outhtml"></code>
+<code id="outhtml">&lt;a href="#"&gt;&lt;img src="https://eratn1kcreations.github.io/utilities/DACarousel/img.png"&gt;&lt;/a&gt;</code>
 </pre>
 
-        </div>        
+        </div>
 
       </div>
     </div>
@@ -60,9 +69,9 @@
     </footer>
   </body>
   <style id="styl">
-    .carouselframe{ width: 1560px; }
-    .carouselbox{ max-width: 1560px; }
-    .aright:hover ~ .carouselframe { left: -1060px; }
+    .carouselframe{width:500px;}
+    .carouselbox{max-width:500px;}
+    .aright:hover ~ .carouselframe {left:-0px;}
   </style>
   <script src="DACarousel/js/bootstrap.min.js"></script>
   <script src="DACarousel/js/script.js"></script>
