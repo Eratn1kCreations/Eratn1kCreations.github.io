@@ -1,17 +1,10 @@
 var ArtIndex = 1;
 
-/*$(function() {
-  $("#sortable").sortable();
-  $("#sortable").disableSelection();
-});*/
-
 function addArt(){
   $("#sortable").append(
     $("<div>").addClass("input-group my-2").append(
-      /*$("<div>").addClass("input-group-prepend").append(
-        $("<span>").addClass("input-group-text").html("⋮⋮⋮")
-      ),*/
-      $("<input>").addClass("form-control").attr({type:"url",placeholder:"Art url",onchange:"updatePreview(this,"+ArtIndex+")"}),
+      $("<input>").addClass("form-control").attr({type:"url",placeholder:"Link url",onchange:"updatePreview(this,"+ArtIndex+",0)"}),
+      $("<input>").addClass("form-control").attr({type:"url",placeholder:"Art url",onchange:"updatePreview(this,"+ArtIndex+",1)"}),
       $("<div>").addClass("input-group-append").append(
         $("<button>").addClass("btn btn-danger btn-sm").attr({onclick:"removeArt(this,"+ArtIndex+")"}).html("Remove")
       )
@@ -28,30 +21,48 @@ function removeArt(e,id){
   }
 }
 
-function updatePreview(e,id){
+function updatePreview(e,id,n){
   if(isUrl($(e).val())){
-    if($('#art'+id).length){
-      $('#art'+id).attr({src:$(e).val()})
+    if(n==0){
+      if($('#link'+id).length){
+        $('#link'+id).attr({href:$(e).val()})
+      } else {
+        $("#cframe").append($("<a>").attr({id:'link'+id,href:$(e).val()}).append($("<img>").attr({id:'art'+id,src:"#"})))
+      }
     } else {
-      $("#cframe").append($("<a>").attr({src:"#"}).append($("<img>").attr({id:'art'+id,src:$(e).val()})))
-    }
+      if($('#art'+id).length){
+        $('#art'+id).attr({src:$(e).val()})
+      } else {
+        $("#cframe").append($("<a>").attr({id:'link'+id,href:"#"}).append($("<img>").attr({id:'art'+id,src:$(e).val()})))
+      }
+    }   
 
     setTimeout(function(){calculate()},1500);
 
   } else {
     $(e).val("");
+    if(n==0){
+      if($('#link'+id).length){
+        $('#link'+id).attr({href:"#"})
+      }
+    } else {
+      if($('#art'+id).length){
+        $('#art'+id).attr({src:"#"})
+      }
+    }  
     calculate();
   }
 }
 
 function calculate(){
   let calcw = 10;
-  let chtml = "";
+  let chtml = '<div class="headerbox">my arts:<div><div class="carouselbox"><div class="scrollsides aleft"></div><div class="scrollsides aright"></div><div class="container">';
   $('#cframe > a').each(function() {
-    if(calcw>10) chtml += '\n';
+    console.log(this);
     calcw += this.offsetWidth;
-    chtml += '<a href="#"><img src="'+this.firstChild.currentSrc+'"></a>';
+    chtml += '\n<a href="'+this.attributes.href.value+'"><img src="'+this.firstChild.attributes.src.value+'"></a>';
   });
+  chtml += '\n</div></div></div></div>';
 
   if(calcw<500) calcw = 500;
 
